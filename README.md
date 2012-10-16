@@ -29,3 +29,11 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Thanks
+
+bundled nice JS libraries.
+
+* http://www.eyecon.ro/bootstrap-datepicker
+* http://jonthornton.github.com/jquery-timepicker/
+
