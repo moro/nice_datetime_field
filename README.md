@@ -1,6 +1,8 @@
 # NiceDatetimeField
 
-TODO: Write a gem description
+Provides nicely usable datetime field.
+
+ActionView's datetime\_field generates a lot of dropdowns and it isn't nice for users to pick.
 
 ## Installation
 
