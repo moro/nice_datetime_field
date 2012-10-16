@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = NiceDatetimeField::VERSION
   gem.authors       = ["moro"]
   gem.email         = ["moronatural@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Provides nicely usable datetime field for Rails app.}
+  gem.summary       = %q{Provides nicely usable datetime field for Rails app.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)

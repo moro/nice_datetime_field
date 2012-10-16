@@ -1,8 +1,9 @@
 # NiceDatetimeField
 
-Provides nicely usable datetime field.
+Provides nicely usable datetime field for Rails app.
 
 ActionView's datetime\_field generates a lot of dropdowns and it isn't nice for users to pick.
+This provides nicely calendar & timepicker scripts for date/datetime field.
 
 ## Installation
 
