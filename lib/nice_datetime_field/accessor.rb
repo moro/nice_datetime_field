@@ -5,10 +5,14 @@ module NiceDatetimeField
     module ClassMethods
       def nice_datetime_accessor(*cols)
         cols.each do |col|
-          class_eval <<-RUBY.strip_heredoc
+          class_eval <<-RUBY.strip_heredoc, __FILE__, __LINE__ + 1
           def #{col}=(val)
             recognizer = NiceDatetimeField::Accessor::Writer.new(val)
-            recognizer.valid? ? super(recognizer.datetime) : super(val)
+            if recognizer.valid?
+              self[:#{col}] = recognizer.datetime
+            else
+              super(val)
+            end
           end
           RUBY
         end
@@ -28,7 +32,7 @@ module NiceDatetimeField
         date = Date.parse(@hash['date'])
         hour, min = @hash['time'].split(/\s*:\s*/, 2).map(&:to_i)
         Time.zone.local(date.year, date.mon, date.day, hour, min)
-      rescue ArgumentError
+      rescue ArgumentError, TypeError
         @hash.values_at('date', 'time').join(' ')
       end
     end
